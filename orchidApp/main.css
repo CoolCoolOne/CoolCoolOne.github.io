@@ -1,0 +1,94 @@
+*{font-family: "Alice", serif;
+    color: darkslategray;}
+
+body{
+    
+    background-image: url(./img/ornam_sprite.jpg);
+}
+
+header{
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.img_container{
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 900px; 
+    min-height: 200px;
+    border: solid wheat 5px;
+    border-radius: 1%;
+    background-color: antiquewhite;
+}       
+
+div.flowerPix{
+    display: block;
+    background-image: url(./img/flowersPix.jpg);
+    max-width: 900px; 
+    min-height: 200px;
+}
+
+.flowerCover{
+    background-size:cover;
+}
+.flowerContain{
+    background-size:contain;
+}
+
+.flowerNoRepeat{
+    background-repeat: no-repeat;
+}
+
+.flowerRepeat{
+    background-repeat: repeat;
+}
+
+nav.toggles{
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 40px;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    
+}
+
+div.button{
+    width: 100px; 
+    height: 80px;
+    border: solid rgb(138, 67, 182) 5px;
+    border-radius: 8%;
+    background-color: antiquewhite;
+    text-align: center;
+    cursor:crosshair;
+}
+
+div.codeDemo{
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 400px; 
+    min-height: 200px;
+    border: solid wheat 5px;
+    border-radius: 1%;
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+span{
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    color: rgb(51, 19, 119);
+}
+
+footer{
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size:larger;
+    font-weight: 800;
+    margin-top: 60px;
+}

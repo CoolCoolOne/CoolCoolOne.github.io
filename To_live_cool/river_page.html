@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>river_page</title>
+    <link rel="stylesheet" href="./css/river_page_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background" id="backpic" >
+        <h1 class="header">Разные реки</h1>
+        <h2 class="subheader">фотографии известных мест...</h2>
+        <div class="rivers-container">
+            <div class="riverpic">
+                <img src="./imgs/rivers/river_01.jpg" alt="river1">
+            </div>
+            <div class="riverpic">
+                <img src="./imgs/rivers/river_02.jpg" alt="river2">
+            </div>
+            <div class="riverpic">
+                <img src="./imgs/rivers/river_03.jpg" alt="river3">
+            </div>
+            <div class="riverpic">
+                <img src="./imgs/rivers/river_04.jpg" alt="river4">
+            </div>
+            <div class="riverpic">
+                <img src="./imgs/rivers/river_05.jpg" alt="river5">
+            </div>
+            <div class="riverpic">
+                <img src="./imgs/rivers/river_06.jpg" alt="river6">
+            </div>
+            <div class="riverpic">
+                <img src="./imgs/rivers/river_07.jpg" alt="river6">
+            </div>
+            <div class="riverpic">
+                <img src="./imgs/rivers/river_08.jpg" alt="river6">
+            </div>
+        </div>
+        <div class="back_button">
+            <a href="./index.html#inst_s"><img src="./imgs/common/back_arrow.png" alt="back_button"></a>
+            <p>(вернуться на главную)</p>
+        </div>
+        <div class="pop_up">
+            <span>&times;</span>
+            <img src="./imgs/rivers/river_01.jpg" alt="river1">
+            <!-- <img src="imgs/rivers/river_01.jpg" alt=""> -->
+        </div>
+    </div>
+
+
+
+    
+    <div class="footer">
+        <div class="container">
+            <div class="footer_row">
+                <div class="footer_copyright">
+                    © CoolCoolOne <br>
+                    © Music by <a target="_blank" href="https://we-are-talking.bandcamp.com/">MGOO</a> <br>
+                    © Images by <a target="_blank" href="https://ru.freepik.com/">Freepik</a> 
+                </div>
+                <div class="footer_connect">
+                    <p>Написать автору можно здесь:</p>
+                    <div class="connect_row">
+                        <a target="_blank" href="https://vk.com/manonthemountain"> <img src="./imgs/footer/communication_vk.png" alt="vk_ref"> </a> 
+                        <a target="_blank" href="https://t.me/Aleksey_Troitsky"> <img src="./imgs/footer/communication_tg.png" alt="tg_ref"> </a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- библиотеки и плагины -->
+<script src="./libs/jqeary/jquery-3.7.1.min.js" >  </script>
+<script src="./libs/vide/jquery.vide.min.js" >  </script>
+<!-- свои вызовы библ -->
+<script src="./js/river.js" >  </script>
+
+<script>
+    // document.querySelectorAll('.riverpic').forEach(img =>{
+    //     img.onclick = () => {
+    //     document.querySelector('.pop_up').style.display = 'block';
+    //     document.querySelector('.pop-up img').src = img.getAttribute('src');
+    // }
+    // });
+
+    // document.querySelector('.pop_up span').onclick = () => {
+    //     document.querySelector('.pop_up').style.display = 'none'; 
+    // }
+
+    document.querySelectorAll('.riverpic img').forEach(img =>{
+            img.onclick = () => {
+                document.querySelector('.pop_up').style.display = 'block';
+                document.querySelector('.pop_up img').src = img.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.pop_up span').onclick = () => {
+            document.querySelector('.pop_up').style.display = 'none'; 
+        }
+</script>
+
+</body>
+</html>

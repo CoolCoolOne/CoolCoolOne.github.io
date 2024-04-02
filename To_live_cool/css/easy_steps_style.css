@@ -1,0 +1,111 @@
+html{
+    scroll-behavior: smooth;  
+  }
+  
+  body{
+      margin: 0;
+      font-family: "Merriweather", serif;
+  }
+  
+  .container{
+      max-width: 1100px;
+      background-color: #d7efcc;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .none{
+      display: none !important;
+  }
+/* page easy steps */
+
+/* MusicNStoryPage */
+/* MusicNStoryPage */
+.music_story_page{
+    /* background-color: brown; */
+    /* width: 100%; */
+    /* height: 140vh; */
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #d7efcc;
+    text-align: center;
+}
+
+.story_head{
+    color: cadetblue;
+}
+
+.story_subtxt{
+    color: cadetblue;
+    font-size: 20px;
+}
+
+.story{
+    margin: 30px;
+    padding: 20px;
+    text-align: justify;
+    background-color: white;
+    text-indent: 30px;
+    border-radius: 20px;
+    /* margin-bottom: 50px; */
+}
+
+.story p{
+    margin-top: 0em; /* Отступ сверху */
+    margin-bottom: 1em; /* Отступ снизу */
+}
+
+.story_musicplayer{
+    float: right;
+    margin: 10px 20px 10px 20px;
+}
+
+.back_button p {
+    color: cadetblue;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* footer same as in main page*/
+/* Footer */
+.footer{
+    background: #FBEABC;
+    padding-top: 35px;
+    padding-bottom: 40px;
+}
+
+.footer_row{
+    background: #FBEABC;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    
+}
+
+.footer_copyright{
+    font-weight: 700;
+    color:  cadetblue;
+    margin: 0;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer_connect{
+
+}
+
+.connect_row{
+    background: #FBEABC;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+}
+
+.footer_connect p{
+    /* font-weight: 700; */
+    color:  cadetblue;
+    margin: 0;
+    margin-bottom: -8px;
+    line-height: 1.5;
+}
+
