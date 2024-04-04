@@ -1,0 +1,175 @@
+body{
+    background: url(./img/back_sp.jpg);
+    background-size: 50%;
+    font-family: "Rubik Doodle Shadow", system-ui;
+    margin: 0;
+    scrollbar-width: thin;
+    scrollbar-color: green black;
+}
+
+body::-webkit-scrollbar {
+    width: 10px; /* Ширина всего элемента навигации */
+  }
+  body::-webkit-scrollbar-track {
+    background:darkslateblue; /* Цвет дорожки */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: green; /* Цвет бегунка */
+    border-radius: 20px; /* Округление бегунка */
+    border: 3px solid plum; /* Оформление границ бегунка */
+  }
+
+
+
+header{
+    /* text-shadow: 10px; */
+    text-align: center;
+    color: coral;
+    
+}
+
+footer{
+    color: coral;
+    background-color: rgba(254, 254, 254, 0.4);
+    height: 80px;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+footer a img{
+    display: inline-block;
+    height: 70px;
+    margin: 5px;
+}
+
+footer a img:hover{
+    transform: rotate(200deg);
+}
+
+footer :last-child img{
+    display: inline-block;
+    transform: rotate(180deg);
+    margin-left: 100vh;
+} 
+
+
+
+
+header h1{
+    font-size: 50px;
+}
+
+header h2{
+    font-size: 30px;
+    margin-bottom: 70px;
+}
+
+
+
+.wndw{
+    height: 150px;
+    background: url(./img/glasscase.jpg);
+    background-position: -900px -250px;
+    background-attachment:fixed;
+    width: 150px;
+    border: solid 5px plum;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    margin-top: 100px;
+    background-size:10%;
+}
+
+
+.wndw .Apear{
+    height: 150px;
+    /* background: url(./img/alienMan.png); */
+    width: 150px;
+}
+.shelf:nth-child(even) .wndw .Apear{
+    height: 150px;
+    background: url(./img/alienMan.png);
+    width: 150px;
+    background-repeat: no-repeat;
+    background-size: 95px ;
+    background-position: center;
+    opacity: 0%;
+    border-radius: 50%;
+}
+.shelf:nth-child(odd) .wndw .Apear{
+    height: 150px;
+    background: url(./img/alienWoman.png);
+    width: 150px;
+    background-repeat: no-repeat;
+    background-size: 95px ;
+    background-position: center;
+    opacity: 0%;
+    border-radius: 50%;
+}
+
+
+.shelf .wndw .Apear:hover{
+    opacity: 100%;
+    cursor:grab;
+}
+
+.wndw .Apear:active{
+    padding-bottom: 10px;
+    height: 130px;
+    background-size: 90px ;
+}
+
+.shelf{
+    height: 330px;
+    background: url(./img/booksStack.png);
+    width: 330px;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    position: static;
+    padding-right: 110px;
+    padding-left: 110px;
+}
+
+.shelf >.Apear{
+    height: 330px;
+    background: url(./img/book_green.png);
+    width: 330px;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-right: 110px;
+    padding-left: 110px;
+    margin-left: -110px;
+    opacity: 0%;
+}
+
+.shelf .Apear:hover{
+    opacity: 100%;
+    cursor:grab;
+}
+
+.shelf:nth-child(even){
+    margin-left: auto;
+}
+.shelf:nth-child(odd){
+    margin-right: auto;
+}
+.shelf:nth-child(even) >.Apear{
+    background-position: left;
+}
+.shelf:nth-child(odd) >.Apear{
+    background-position: right;
+}
+
+.shelf:nth-child(7) .wndw{
+display: none;
+}
+
