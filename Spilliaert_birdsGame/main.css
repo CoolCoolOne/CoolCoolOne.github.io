@@ -1,0 +1,40 @@
+*{
+    font-family: "Alice", serif;
+    margin: 0;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    background-color: RGB(277, 224, 208);
+    /* justify-content: center; align-items: center; */
+    cursor: grab;
+}
+
+html{
+    margin-top: 0;
+    margin-left: 0;
+}
+
+div.container{ 
+    cursor:cell; margin: 0; 
+    background-color: RGB(277, 224, 208);
+    color: #0f750d;
+    display: block;
+    width: 1000px;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* cursor:pointer; */
+}
+
+h2{
+    /* margin: 20; */
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+h3{
+    /* margin: 20; */
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
