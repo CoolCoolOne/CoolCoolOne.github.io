@@ -20,19 +20,19 @@ arrBirds[1] = {
   name: bird02
 }
 arrBirds[2] = {
-  xPos: 750, yPos: 590,
+  xPos: 710, yPos: 550,
   name: bird03
 }
 arrBirds[3] = {
-  xPos: 100, yPos: 710,
+  xPos: 80, yPos: 714,
   name: bird04
 }
 arrBirds[4] = {
-  xPos: 450, yPos: 595,
+  xPos: 300, yPos: 298,
   name: bird05
 }
 arrBirds[5] = {
-  xPos: 890, yPos: 325,
+  xPos: 490, yPos: 145,
   name: bird06
 }
   // конец массива птиц
@@ -42,6 +42,7 @@ arrBirds[5] = {
       image(arrBirds[bird_num].name, arrBirds[bird_num].xPos, arrBirds[bird_num].yPos, 40, 30, 0, 0, orig_bird_width, orig_bird_higth, CONTAIN);
       // arrBirds[bird_num].detected = true;
       // console.log (arrBirds[bird_num].detected);
+      return someoneDetected = true;
     };
   }
   bird_num = 0;
@@ -49,6 +50,7 @@ arrBirds[5] = {
 }
 
 function preload() {
+    font = loadFont('./Alice-Regular.otf');
     img = loadImage('./imgs/spilliart_transparrent.png');
     bird01 = loadImage('./imgs/duatel.png');
     bird02 = loadImage('./imgs/happy_one.png');
@@ -59,6 +61,7 @@ function preload() {
   }
 
 function setup() {
+  textFont(font);
     createCanvas(1000, 800);
     // Draw the image.
     background(277, 224, 208);
@@ -66,6 +69,7 @@ function setup() {
     g= random(0, 200);
     b= random(0, 200);
     // image(img, 0, 0, width, height, 0, 0, 1200, 848, COVER);
+    textSize(32);
   }
   
   function draw() {
@@ -91,20 +95,35 @@ function setup() {
       fill (r, g, b, 20);
       circle (x, y, 120);
       image(img, 0, 0, width, height, 0, 0, 1200, 848, COVER);
-      drawBirds(mouseX,mouseY);
+      someoneDetected = drawBirds(mouseX,mouseY);
     } else if (timeSpended < 1500) {
       fill (165, 42, 42, 20);
       circle (x, y, 140);
       image(img, 0, 0, width, height, 0, 0, 1200, 848, COVER);
-      drawBirds(mouseX,mouseY);
+      someoneDetected = drawBirds(mouseX,mouseY);
     } else if (timeSpended < 2000) {
       fill (0, 0, 0, 10);
       circle (x, y, 350);
-      drawBirds(mouseX,mouseY);
+      someoneDetected = drawBirds(mouseX,mouseY);
     } else {
-      // if(arrBirds[1].detected){
-      //   alert('УРА')
-      // }
+      fill (102, 205, 170);
+      someoneDetected = false;
+      textSize(42);
+      stroke(255);
+      strokeWeight(50, 50, 50);
+      text('Стемнело!', 150, 160, 400,400);
+    }
+    if (someoneDetected){
+      // stroke(7);
+      fill (255, 215, 0, 60);
+      circle (mouseX, mouseY, 60);
+      // fill (0, 100, 0,80);
+      fill (255, 69, 0);
+      // rotateY(frameCount / 30);
+      textSize(32);
+      stroke(255);
+      strokeWeight(50, 50, 50);
+      text('нашёл птаху!', 50, 70, 400,400);
     }
 
     // if(allIsDetected){
