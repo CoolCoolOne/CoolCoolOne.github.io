@@ -6,6 +6,17 @@ let timeSpended = 0;
 orig_bird_width = 400;
 orig_bird_higth = 350;
 
+const rst_btn = document.querySelector('#reset');
+
+function reloadGame(){
+    console.log('click!!!');
+  rst_btn.addEventListener('click', function(){
+    rst_btn.classList.add('none');
+    timeSpended=0;
+    background(277, 224, 208);
+  })
+}
+
 function drawBirds(Xcoord,Ycoord){
 
   //массив птиц  с местами обитания
@@ -112,6 +123,9 @@ function setup() {
       stroke(255);
       strokeWeight(50, 50, 50);
       text('Стемнело!', 150, 160, 400,400);
+      rst_btn.classList.remove('none');
+
+      reloadGame();
     }
     if (someoneDetected){
       // stroke(7);
