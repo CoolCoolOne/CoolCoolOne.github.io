@@ -6,22 +6,46 @@ let timeSpended = 0;
 orig_bird_width = 400;
 orig_bird_higth = 350;
 
+const arrBirds = [];
+let bird_detect = [duatel=false,happy_one=false,sinitsa=false,soroca=false,voroba=false,winter_bird=false];
+
+
 const rst_btn = document.querySelector('#reset');
 
 function reloadGame(){
-    console.log('click!!!');
+    // console.log('click!!!');
+    let countTotal=birds_totally_finded();
+    console.log(countTotal);
+    textSize(26);
+    stroke(255);
+    strokeWeight(50);
+    text(`Молодец/умница! обнаружено ${countTotal} птицов`, 250, 260, 800,800);
+
+
+
   rst_btn.addEventListener('click', function(){
     rst_btn.classList.add('none');
     timeSpended=0;
     background(277, 224, 208);
+    bird_detect = [duatel=false,happy_one=false,sinitsa=false,soroca=false,voroba=false,winter_bird=false];
+    loop();
   })
+}
+
+function birds_totally_finded(){
+  count = 0;
+  for (let bird_num = 0; bird_num <= 5; bird_num++) { 
+    if (bird_detect[bird_num]) {
+      count++;
+    };
+  }
+  return count;
 }
 
 function drawBirds(Xcoord,Ycoord){
 
   //массив птиц  с местами обитания
   // жоский костыль
-  const arrBirds = [];
   arrBirds[0] = {
     xPos: 650, yPos: 365,
     name: bird01
@@ -53,6 +77,8 @@ arrBirds[5] = {
       image(arrBirds[bird_num].name, arrBirds[bird_num].xPos, arrBirds[bird_num].yPos, 40, 30, 0, 0, orig_bird_width, orig_bird_higth, CONTAIN);
       // arrBirds[bird_num].detected = true;
       // console.log (arrBirds[bird_num].detected);
+      bird_detect[bird_num]=true;
+      // alert( bird_detect[0] );
       return someoneDetected = true;
     };
   }
@@ -124,7 +150,7 @@ function setup() {
       strokeWeight(50, 50, 50);
       text('Стемнело!', 150, 160, 400,400);
       rst_btn.classList.remove('none');
-
+      noLoop();
       reloadGame();
     }
     if (someoneDetected){
@@ -132,6 +158,9 @@ function setup() {
       fill (255, 215, 0, 60);
       circle (mouseX, mouseY, 60);
       // fill (0, 100, 0,80);
+
+
+
       fill (255, 69, 0);
       // rotateY(frameCount / 30);
       textSize(32);
@@ -147,3 +176,12 @@ function setup() {
   }
 
   
+//   const cursorRounded = document.querySelector('.rounded');
+// const moveCursor = (e)=> {
+//   const mouseY = e.clientY;
+//   const mouseX = e.clientX;
+   
+//   cursorRounded.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+ 
+// }
+// window.addEventListener('mousemove', moveCursor)
