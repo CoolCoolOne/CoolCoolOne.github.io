@@ -42,8 +42,8 @@ class Wave {
 
 }
 
-const canvasWidth = 800;
-let x = -50;
+const canvasWidth = 1000;
+let x = -5000;
 
 
 function setup() {
@@ -52,38 +52,40 @@ function setup() {
 }
 
 // let wave0 = new Wave(random(1,5),random(10,120),random(0,20));
-
-let wave0 = new Wave(1+Math.random() * 5, Math.random() * 200, 60);
-let traject0 = wave0.presetTrajectory(2, canvasWidth);
-let wave1 = new Wave(1+Math.random() * 5, Math.random() * 100, 60);
-let traject1 = wave1.presetTrajectory(2, canvasWidth);
-let wave2 = new Wave(1+Math.random() * 5, Math.random() * 100, 60);
-let traject2 = wave2.presetTrajectory(2, canvasWidth);
-let wave3 = new Wave(1+Math.random() * 5, Math.random() * 100, 60);
-let traject3 = wave3.presetTrajectory(2, canvasWidth);
+let wave_count = 150;
+let waves_array = [];
+for (let i = 0; i < wave_count; i++) {
+  waves_array[i] = new Wave(1+Math.random() * 5, Math.random() * 200, 60);
+}
+let traject0 = waves_array[0].presetTrajectory(2, canvasWidth);
+// let wave0 = new Wave(1+Math.random() * 5, Math.random() * 200, 60);
+// let wave1 = new Wave(1+Math.random() * 5, Math.random() * 100, 60);
+// let wave2 = new Wave(1+Math.random() * 5, Math.random() * 100, 60);
+// let wave3 = new Wave(1+Math.random() * 5, Math.random() * 100, 60);
 
 function draw() {
   let lastSize = 0;
   background(85, 107+Math.sin(x/50)*10, 47);
-  wave0.appear(x, traject0[x] + 150);
-  lastSize = wave0.TellSize()
-  wave1.appear(x+lastSize, traject0[x+Math.round(lastSize)] + 150);
-  // lastSize2 = wave1.TellSize()
-  lastSize = lastSize+wave1.TellSize();
-  wave2.appear(x+lastSize, traject0[x+Math.round(lastSize)] + 150);
-  lastSize = lastSize+wave2.TellSize();
-  wave3.appear(x+lastSize, traject0[x+Math.round(lastSize)] + 150);
+  // wave0.appear(x, traject0[x] + 150);
+  // lastSize = wave0.TellSize()
+  // wave1.appear(x+lastSize, traject0[x+Math.round(lastSize)] + 150);
+  // lastSize = lastSize+wave1.TellSize();
+  // wave2.appear(x+lastSize, traject0[x+Math.round(lastSize)] + 150);
+  // lastSize = lastSize+wave2.TellSize();
+  // wave3.appear(x+lastSize, traject0[x+Math.round(lastSize)] + 150);
+
+  for (let i = 0; i < wave_count; i++) {
+    waves_array[i].appear(x+lastSize, traject0[x+Math.round(lastSize)] + 150);
+    lastSize = lastSize+waves_array[i].TellSize();
+  }
+
+
   x = x + 7;
   if (x > canvasWidth) {
-    x = -50;
-    wave0 = new Wave(1+Math.random() * 5, Math.random() * 100, 60);
-    traject0 = wave0.presetTrajectory(2, canvasWidth);
-    wave1 = new Wave(1+Math.random() * 5, Math.random() * 100, 60);
-    traject1 = wave1.presetTrajectory(2, canvasWidth);
-    wave2 = new Wave(1+Math.random() * 5, Math.random() * 100, 60);
-    traject2 = wave2.presetTrajectory(2, canvasWidth);
-    wave3 = new Wave(1+Math.random() * 5, Math.random() * 100, 60);
-    traject3 = wave3.presetTrajectory(2, canvasWidth);
+    x = -5000;
+    for (let i = 0; i < wave_count; i++) {
+      waves_array[i] = new Wave(1+Math.random() * 5, Math.random() * 200, 60);
+    }
   }
 }
 
