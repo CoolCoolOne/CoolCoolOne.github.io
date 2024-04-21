@@ -10,34 +10,28 @@ class Wave {
         this.tide = tide;
         this.position = initPosition;
     }
-    // get position() {
-    //     return this.position;
-    // }
-    // set position(value) {
-    //     this.position = value;
-    // }
 
 
-    appear(position, center) {
+    appear(positionAppear, center) {
         noStroke();
-        fill(50 + this.shade / 5, 50 + this.shade, 120 + this.shade,100);
+        stroke('Yellow');
+        fill(50 + this.shade / 5, 50 + this.shade, 120 + this.shade);
         rectMode(CENTER);
-        rect(position, center, this.pixelSize, 100 + this.tide, 5);
-        //   this.position = position;
+        rect(positionAppear, center, this.pixelSize, 100 + this.tide, 5);
     }
-    TellSize() {
-        return this.pixelSize;
+
+    numeroWawoo(textContent, xCoord, yCoord) {
+        fill('Yellow');
+        textSize(yCoord/10);
+        // rotateY(30);
+        text(textContent, xCoord-this.pixelSize/7, yCoord);
     }
+
     presetTrajectory(worldHidht, lenght) {
         let y_coord = [];
-        let x_coord = [];
-
-        let traject;
 
         for (let i = 0; i < lenght; i++) {
-            x_coord[i]=i;
             y_coord[i] = Math.sin(i / 60) * 40 + worldHidht/2 -20;
-            // traject[i][0]=;
         }
         return y_coord;
     }
