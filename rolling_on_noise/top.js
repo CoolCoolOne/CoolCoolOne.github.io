@@ -17,6 +17,7 @@ let in_center;
 let speed=3;
 let counter=0;
 let displyed_center;
+let distanse = 0;
 
 function draw() {
 //  console.log(displyed_center);
@@ -67,6 +68,7 @@ function draw() {
     // displyed_center = 1000000/floor(in_center)-200;
     displyed_center = floor(map(in_center, 550, 100, -100, 1500));
     counter = 0;
+    distanse +=1;
  }
 
 
@@ -74,6 +76,7 @@ function draw() {
   fill(255, 255, 255);
     textSize(20);
     text(`высота ${floor(displyed_center)} м`, 50, 50);
+    text(`пройдено ${distanse*10} м`, 50, 75);
   
   //noLoop();
 }
