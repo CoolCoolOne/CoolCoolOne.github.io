@@ -1,5 +1,3 @@
-let inc = 0.01;
-let start = 0;
 
 canvasWidth=500;
 canvasHight=300;
@@ -46,7 +44,7 @@ function draw() {
 
  fill(255, 165, 0);
  ellipseMode(CENTER);
- ellipse(CenterX,CenterY,50);
+ ellipse(CenterX,CenterY,70+5*Math.sin(offs));
 
  rectMode(CENTER);
  noStroke();
