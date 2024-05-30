@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nenuphar_dev</title>
+</head>
+
+<body>
+
+    <!-- первый блок в сайте -->
+    <!-- рамочка и фон её -->
+    <style>
+        .chartBox {
+            /* width: 100px; */
+            padding: 20px;
+            border-radius: 20px;
+            border: solid 5px rgb(27, 129, 43);
+            /*background: rgb(177, 204, 230);*/
+        }
+    </style>
+
+    <!-- // выделяем место под диаграмму -->
+    <div class="chartBox">
+        <canvas id="SunChart_desktop"></canvas>
+    </div>
+
+    <!-- // добавляем библиотеку которая предлагает разные виды диаграмм -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- данные ссылки и количество!!! -->
+    <script>
+        const data = {
+            labels: [
+                'Сдаю',
+                'Место для работы',
+                'Дом',
+                'Путешествия',
+                'Сниму',
+                'коливинг',
+                'попутчики',
+                'Психология',
+                'Творчество',
+                'йога',
+                'Саморазвитие',
+                'блог'
+            ],
+            datasets: [{
+                label: ' ',
+                data: [
+                    { tag: 'Сдаю', url: 'https://github.com/CoolCoolOne', amount: { persent: 50 } },
+                    { tag: 'Место для работы', url: 'https://we-are-talking.bandcamp.com/', amount: { persent: 20 } },
+                    { tag: 'Дом', url: 'https://www.youtube.com/channel/UCkSAiLDUNNzD0ub4frKriEQ', amount: { persent: 30 } },
+                    { tag: 'Путешествия', url: 'https://github.com/CoolCoolOne', amount: { persent: 40 } },
+                    { tag: 'Сниму', url: 'https://github.com/CoolCoolOne', amount: { persent: 160 } },
+                    { tag: 'коливинг', url: 'https://github.com/CoolCoolOne', amount: { persent: 10 } },
+                    { tag: 'попутчики', url: 'https://github.com/CoolCoolOne', amount: { persent: 70 } },
+                    { tag: 'Психология', url: 'https://github.com/CoolCoolOne', amount: { persent: 20 } },
+                    { tag: 'Творчество', url: 'https://github.com/CoolCoolOne', amount: { persent: 22 } },
+                    { tag: 'йога', url: 'https://github.com/CoolCoolOne', amount: { persent: 45 } },
+                    { tag: 'Саморазвитие', url: 'https://github.com/CoolCoolOne', amount: { persent: 59 } },
+                    { tag: 'блог', url: 'https://github.com/CoolCoolOne', amount: { persent: 120 } }],
+
+                backgroundColor: [
+                    'rgba(124, 252, 0, 0.2)',
+                    'rgba(152, 251, 152,0.2)',
+                    'rgba(0, 250, 154,0.3)'
+                ],
+                borderColor: [
+                    'rgba(72, 113, 37, 1)'
+                ],
+                borderWidth: 2,
+                offset: 15,
+                hoverOffset: 15,
+                borderRadius: 4,
+                cutout: '10%',
+                hoverBackgroundColor: 'rgba(124, 252, 0, 0.8)',
+            }]
+        };
+        // легенда и конфиги
+        const MainConfig = {
+            type: 'pie',
+            data,
+            options: {
+                parsing: {
+                    key: 'amount.persent'
+                },
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        displayColors: false
+                    }
+                },
+                aspectRatio: 1
+            }
+        };
+
+        // код для работы интерактива
+        const ctx = document.getElementById('SunChart_desktop');
+        const DeskChart = new Chart(ctx, MainConfig);
+
+        function pieLink(click) {
+            const clickedInfo = DeskChart.getElementsAtEventForMode(click, 'nearest', { intersect: true }, true);
+            if (clickedInfo.length) {
+                const pieSlice = clickedInfo[0];
+                const urlLink = (DeskChart.data.datasets[pieSlice.datasetIndex].data[pieSlice.index].url);
+                console.log(urlLink);
+                // location.href = urlLink;
+                window.open(urlLink);
+            }
+        }
+        ctx.onclick = pieLink;
+    </script>
+    <!-- конец первый блок в сайте -->
+
+
+    <!-- Мобильный второй блок в сайте -->
+    <!-- рамочка и фон её -->
+    <style>
+        .chartBox_m {
+            /*max-width: 150px;*/
+            padding: 25px;
+            /* border-radius: 50%; */
+            /* border: solid 5px rgb(27, 129, 43); */
+            /*background: rgb(177, 204, 230);*/
+        }
+
+        .chartCard_m {
+            padding: 10px;
+            /*width: 100vw;*/
+            /*height: calc(50vh);*/
+            /* background: rgba(54, 162, 235, 0.2); */
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*justify-content: center;*/
+        }
+
+        .canvas_m {
+            /* padding: 10px; */
+            /*width: 100vw;*/
+            height: 300px;
+            /* background: rgba(54, 162, 235, 0.2); */
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*justify-content: center;*/
+        }
+    </style>
+
+    <!-- // выделяем место под диаграмму -->
+    <div class="chartCard_m">
+        <div class="chartBox_m">
+            <canvas class="canvas_m" id="SunChart_m"></canvas>
+        </div>
+    </div>
+
+    <!-- // добавляем плагин для подписей слайсов для мобилки -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
+
+    <!--// код js-->
+    <script>
+
+        //  конфиги. легенда определена в первом блоке
+        const MobilConfig = {
+            type: 'pie',
+            data,
+            options: {
+                parsing: {
+                    key: 'amount.persent'
+                },
+                // aspectRatio: 2,
+                plugins: {
+                    legend: {
+                        display: false,
+                    },
+                    tooltip: {
+                        displayColors: false
+                    },
+                    datalabels: {
+                        anchor: 'center',
+                        display: 'auto',
+                        // backgroundColor: function (context) {
+                        //     return context.dataset.backgroundColor;
+                        // },
+                        backgroundColor: 'rgba(0, 250, 154,0.6)',
+                        // borderColor: 'black',
+                        borderRadius: 2,
+                        borderWidth: 0,
+                        color: 'black',
+                        font: {
+                            // weight: 'bold',
+                            size: 13,
+                            family: "Montserrat"
+                        },
+                        formatter: ((context, args) => {
+                            const slIndex = args.dataIndex;
+                            return args.dataset.data[slIndex].tag;
+                        })
+                    }
+                }
+            },
+            plugins: [ChartDataLabels]
+        };
+
+
+        // MIBIL CONFIG !!!!! ctx M !!!!
+        const ctx_m = document.getElementById('SunChart_m');
+        const MobilChart = new Chart(ctx_m, MobilConfig);
+
+
+        // реализация интерактива
+        function pieLink_m(click) {
+            const clickedInfo = MobilChart.getElementsAtEventForMode(click, 'nearest', { intersect: true }, true);
+            if (clickedInfo.length) {
+                const pieSlice = clickedInfo[0];
+                const urlLink = (MobilChart.data.datasets[pieSlice.datasetIndex].data[pieSlice.index].url);
+                // console.log(urlLink);
+                location.href = urlLink;
+                // window.open(urlLink);
+            }
+        }
+        ctx_m.onclick = pieLink_m;
+
+
+    </script>
+    <!-- конец Мобильный второй блок в  сайте -->
+
+
+</body>
+
+</html>
