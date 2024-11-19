@@ -1,0 +1,220 @@
+/* Общее */
+
+@font-face {
+    font-family: 'TTNorms';
+    src: url(./fonts/TTNorms-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    font-family: 'TTNorms';
+    color: black;
+}
+
+.background {
+    background-color: #F2F3F5;
+}
+
+
+.container {
+    margin-top: 0px;
+    max-width: 1167px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* слой 1 */
+.layoutTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 50px;
+}
+
+.time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.time img {
+    max-height: 20px;
+}
+
+.time_txt {
+    line-height: 20px;
+}
+
+
+
+.navigat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 20px;
+    gap: 15px;
+}
+
+a.refer {
+    /* font-family: 'Inter'; */
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-decoration: none;
+    color: #505567 !important;
+}
+
+.w_dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0px;
+}
+
+.rightMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+.contacts,
+.basket {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    line-height: 20px;
+    max-height: 20px;
+}
+
+.basket p {
+    cursor: pointer;
+}
+
+.contacts a,
+.basket a {
+    max-height: 20px;
+}
+
+/* Слой 2 */
+
+nav.layoutMiddle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 80px;
+}
+
+.name,
+.search,
+.phone,
+.cardMenu,
+.number,
+.cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    line-height: 20px;
+}
+
+.title {
+    margin-left: 20px;
+    max-width: 124px;
+}
+
+.search {
+    width: 375px;
+    height: 44px;
+    border: solid #D0D2D7 1px;
+    border-radius: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: text;
+}
+
+.search p {
+    margin-left: 20px;
+    color: #7D818E;
+}
+
+.search img {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.phone img.phonePic {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.number {
+    line-height: 22px;
+    color: #222A46;
+    font-weight: bold;
+}
+
+p.askCall {
+    color: #E2195B;
+    line-height: 20px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.cart {
+    margin-right: 14px;
+    margin-left: 20px;
+}
+
+.cartIcon {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cartIcon img:last-child {
+    position: absolute;
+    top: -7px;
+    right: -17px;
+    cursor
+}
+
+.cardMenu p {
+    color: #E2195B;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+
+/* Слой 3 */
+.background_shadow{
+    -webkit-box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
+-moz-box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
+box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
+}
+
+nav.layoutBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 60px;
+    gap: 41px;
+}
+
+a.refer_bottom {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    font-weight: bold;
+}
