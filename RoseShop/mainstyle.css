@@ -180,19 +180,23 @@ p.askCall {
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
+
 
 .cartIcon img:last-child {
     position: absolute;
     top: -7px;
     right: -17px;
-    cursor
 }
 
 .cardMenu p {
     color: #E2195B;
     line-height: 22px;
     font-weight: bold;
+}
+.cardMenu img {
+    cursor: pointer;
 }
 
 
