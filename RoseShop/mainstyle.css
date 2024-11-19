@@ -21,6 +21,8 @@
     max-width: 1167px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* слой 1 */
@@ -195,10 +197,10 @@ p.askCall {
 
 
 /* Слой 3 */
-.background_shadow{
+.background_shadow {
     -webkit-box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
--moz-box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
-box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
+    -moz-box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
+    box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
 }
 
 nav.layoutBottom {
@@ -210,11 +212,38 @@ nav.layoutBottom {
     gap: 41px;
 }
 
+.layoutBottom a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3px;
+}
+
 a.refer_bottom {
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     text-decoration: none;
     font-weight: bold;
+}
+
+a.refer_bottom:first-child {
+    text-transform: uppercase;
+    color: #E2195B;
+    margin-left: 10px;
+}
+
+a.refer_bottom:first-child::before {
+    content: url(./imgs/layout_3/discount.svg);
+    position: relative;
+    left: -10px;
+    top: 3px;
+}
+
+a.refer_bottom:nth-child(n+2):nth-child(-n+7)::after {
+    content: url(./imgs/common/dropdown.svg);
+    position: relative;
+    top: 5px;
 }
