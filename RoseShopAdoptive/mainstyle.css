@@ -16,6 +16,11 @@
 }
 
 @media (min-width: 1024px) {
+    .burger_mobile {
+        display: none;
+    }
+
+
     .container {
         margin-top: 0px;
         max-width: 1167px;
@@ -24,7 +29,7 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-    
+
     /* слой 1 */
     .layoutTop {
         display: flex;
@@ -33,24 +38,24 @@
         flex-direction: row;
         height: 50px;
     }
-    
+
     .time {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 10px;
     }
-    
+
     .time img {
         max-height: 20px;
     }
-    
+
     .time_txt {
         line-height: 20px;
     }
-    
-    
-    
+
+
+
     .navigat {
         display: flex;
         flex-direction: row;
@@ -58,7 +63,7 @@
         line-height: 20px;
         gap: 15px;
     }
-    
+
     a.refer {
         /* font-family: 'Inter'; */
         font-style: normal;
@@ -68,21 +73,21 @@
         text-decoration: none;
         color: #505567 !important;
     }
-    
+
     .w_dropdown {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-right: 0px;
     }
-    
+
     .rightMenu {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 25px;
     }
-    
+
     .contacts,
     .basket {
         display: flex;
@@ -92,18 +97,18 @@
         line-height: 20px;
         max-height: 20px;
     }
-    
+
     .basket p {
         cursor: pointer;
     }
-    
+
     .contacts a,
     .basket a {
         max-height: 20px;
     }
-    
+
     /* Слой 2 */
-    
+
     nav.layoutMiddle {
         display: flex;
         align-items: center;
@@ -111,7 +116,7 @@
         flex-direction: row;
         height: 80px;
     }
-    
+
     .name,
     .search,
     .phone,
@@ -124,89 +129,90 @@
         flex-direction: row;
         line-height: 20px;
     }
-    
+
     .title {
         margin-left: 20px;
         max-width: 124px;
     }
-    
+
     .search {
         width: 375px;
         height: 44px;
         border: solid #D0D2D7 1px;
         border-radius: 60px;
-    
+
         display: flex;
         align-items: center;
         justify-content: space-between;
-    
+
         cursor: text;
     }
-    
+
     .search p {
         margin-left: 20px;
         color: #7D818E;
     }
-    
+
     .search img {
         margin-right: 20px;
         cursor: pointer;
     }
-    
+
     .phone img.phonePic {
         margin-right: 15px;
         cursor: pointer;
     }
-    
+
     .number {
         line-height: 22px;
         color: #222A46;
         font-weight: bold;
     }
-    
+
     p.askCall {
         color: #E2195B;
         line-height: 20px;
         text-decoration: underline;
         cursor: pointer;
     }
-    
+
     .cart {
         margin-right: 14px;
         margin-left: 20px;
     }
-    
+
     .cartIcon {
         display: flex;
         align-items: center;
         position: relative;
         cursor: pointer;
     }
-    
-    
+
+
     .cartIcon img:last-child {
         position: absolute;
         top: -7px;
         right: -17px;
     }
-    
+
     .cardMenu p {
         color: #E2195B;
         line-height: 22px;
         font-weight: bold;
     }
+
     .cardMenu img {
         cursor: pointer;
     }
-    
-    
+
+
     /* Слой 3 */
     .background_shadow {
         -webkit-box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
         -moz-box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
         box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
     }
-    
+
     nav.layoutBottom {
         display: flex;
         align-items: center;
@@ -215,14 +221,14 @@
         height: 60px;
         gap: 41px;
     }
-    
-    .layoutBottom a{
+
+    .layoutBottom a {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 3px;
     }
-    
+
     a.refer_bottom {
         font-style: normal;
         font-weight: 400;
@@ -232,31 +238,36 @@
         text-decoration: none;
         font-weight: bold;
     }
-    
+
     a.refer_bottom:first-child {
         text-transform: uppercase;
         color: #E2195B;
         margin-left: 10px;
     }
-    
+
     a.refer_bottom:first-child::before {
         content: url(./imgs/layout_3/discount.svg);
         position: relative;
         left: -10px;
         top: 3px;
     }
-    
+
     a.refer_bottom:nth-child(n+2):nth-child(-n+7)::after {
         content: url(./imgs/common/dropdown.svg);
         position: relative;
         top: 5px;
     }
- }
+}
 
- @media  (min-width: 580px) and (max-width: 1023px) {
+@media (min-width: 580px) and (max-width: 1023px) {
     * {
         font-size: 10px;
     }
+
+    .burger_mobile {
+        display: none;
+    }
+
     .container {
         margin-top: 0px;
         max-width: 1167px;
@@ -265,7 +276,7 @@
         padding-left: 15px;
         padding-right: 15px;
     }
-    
+
     /* слой 1 */
     .layoutTop {
         display: flex;
@@ -274,25 +285,25 @@
         flex-direction: row;
         height: 50px;
     }
-    
+
     .time {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 10px;
     }
-    
+
     .time img {
         max-height: 20px;
         margin-right: 10px;
     }
-    
+
     .time_txt {
         display: none;
     }
-    
-    
-    
+
+
+
     .navigat {
         display: flex;
         flex-direction: row;
@@ -301,7 +312,7 @@
         gap: 15px;
         font-size: 10px;
     }
-    
+
     a.refer {
         /* font-family: 'Inter'; */
         font-style: normal;
@@ -311,21 +322,21 @@
         text-decoration: none;
         color: #505567 !important;
     }
-    
+
     .w_dropdown {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-right: 0px;
     }
-    
+
     .rightMenu {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 25px;
     }
-    
+
     .contacts,
     .basket {
         display: flex;
@@ -335,18 +346,18 @@
         line-height: 20px;
         max-height: 20px;
     }
-    
+
     .basket p {
         cursor: pointer;
     }
-    
+
     .contacts a,
     .basket a {
         max-height: 20px;
     }
-    
+
     /* Слой 2 */
-    
+
     nav.layoutMiddle {
         display: flex;
         align-items: center;
@@ -354,7 +365,7 @@
         flex-direction: row;
         height: 80px;
     }
-    
+
     .name,
     .search,
     .phone,
@@ -367,48 +378,48 @@
         flex-direction: row;
         line-height: 20px;
     }
-    
+
     .title {
         margin-left: 20px;
         max-width: 124px;
     }
-    
+
     .search {
         width: 44px;
         height: 44px;
         border: solid #D0D2D7 1px;
         border-radius: 60px;
-    
+
         display: flex;
         align-items: center;
         justify-content: space-between;
-    
+
         cursor: text;
     }
-    
+
     .search p {
         margin-left: 20px;
         color: #7D818E;
         display: none;
     }
-    
+
     .search img {
         margin-left: 15px;
         cursor: pointer;
     }
-    
+
     .phone img.phonePic {
         margin-right: 15px;
         cursor: pointer;
     }
-    
+
     .number {
         font-size: 10px;
         color: #222A46;
         font-weight: bold;
         display: none;
     }
-    
+
     p.askCall {
         color: #E2195B;
         line-height: 20px;
@@ -416,43 +427,44 @@
         cursor: pointer;
         display: none;
     }
-    
+
     .cart {
         margin-right: 14px;
         margin-left: 20px;
     }
-    
+
     .cartIcon {
         display: flex;
         align-items: center;
         position: relative;
         cursor: pointer;
     }
-    
-    
+
+
     .cartIcon img:last-child {
         position: absolute;
         top: -7px;
         right: -17px;
     }
-    
+
     .cardMenu p {
         color: #E2195B;
         line-height: 22px;
         font-weight: bold;
     }
+
     .cardMenu img {
         cursor: pointer;
     }
-    
-    
+
+
     /* Слой 3 */
     .background_shadow {
         -webkit-box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
         -moz-box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
         box-shadow: 0px 9px 31px -5px rgba(34, 60, 80, 0.28);
     }
-    
+
     nav.layoutBottom {
         display: flex;
         align-items: center;
@@ -461,14 +473,14 @@
         height: 60px;
         gap: 5px;
     }
-    
-    .layoutBottom a{
+
+    .layoutBottom a {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 3px;
     }
-    
+
     a.refer_bottom {
         font-style: normal;
         font-weight: 400;
@@ -477,28 +489,36 @@
         text-decoration: none;
         font-weight: bold;
     }
-    
+
     a.refer_bottom:first-child {
         text-transform: uppercase;
         color: #E2195B;
         margin-left: 10px;
     }
-    
+
     a.refer_bottom:first-child::before {
         content: url(./imgs/layout_3/discount.svg);
         position: relative;
         left: -10px;
         top: 3px;
     }
-    
+
     a.refer_bottom:nth-child(n+2):nth-child(-n+7)::after {
         content: url(./imgs/common/dropdown.svg);
         position: relative;
         top: 5px;
     }
- }
+}
 
- @media  (max-width: 579px) {
+@media (max-width: 579px) {
+    .burger_mobile {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+
+
     * {
         font-size: 15px;
     }
@@ -507,7 +527,7 @@
         background-color: #ffffff;
         position: relative;
     }
-    
+
     .layoutTop {
         display: flex;
         align-items: center;
@@ -516,9 +536,9 @@
         height: 50px;
         display: none;
     }
-    
+
     /* Слой 2 */
-    
+
     nav.layoutMiddle {
         display: flex;
         align-items: center;
@@ -526,8 +546,8 @@
         flex-direction: row;
         height: 80px;
     }
-    
-    .name{
+
+    .name {
         position: absolute;
         top: 10px;
         left: 15px;
@@ -543,60 +563,65 @@
         bottom: 15px;
     }
 
-    .phone{
+    .phone {
         left: 15px;
-        bottom: 12px;
-    }
-    .search{
-        left: 100px;
+        bottom: 19px;
     }
 
-    .cardMenu{
-        right: 90px;
-        bottom: 0px;
-    }
-    
-    .title {
-        margin-left: 20px;
-        max-width: 124px;
-    }
-    
     .search {
-        width: 110px;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .cardMenu {
+        right: 90px;
+        bottom: 9px;
+    }
+
+    .title {
+        margin-left: 0px;
+        max-width: 300px;
+        font-size: 15px;
+    }
+
+    .search {
+        max-width: 300px;
+        min-width: 150px;
         height: 44px;
         border: solid #D0D2D7 1px;
         border-radius: 60px;
-    
+
         display: flex;
         align-items: center;
         justify-content: space-between;
-    
+
         cursor: text;
     }
-    
+
     .search p {
         margin-left: 20px;
         color: #7D818E;
         display: none;
     }
-    
+
     .search img {
         margin-left: 15px;
         cursor: pointer;
     }
-    
+
     .phone img.phonePic {
         margin-right: 15px;
         cursor: pointer;
     }
-    
+
     .number {
         font-size: 10px;
         color: #222A46;
         font-weight: bold;
         display: none;
     }
-    
+
     p.askCall {
         color: #E2195B;
         line-height: 20px;
@@ -604,35 +629,36 @@
         cursor: pointer;
         display: none;
     }
-    
+
     .cart {
         margin-right: 14px;
         margin-left: 20px;
     }
-    
+
     .cartIcon {
         display: flex;
         align-items: center;
         position: relative;
         cursor: pointer;
     }
-    
-    
+
+
     .cartIcon img:last-child {
         position: absolute;
         top: -7px;
         right: -17px;
     }
-    
+
     .cardMenu p {
         color: #E2195B;
         line-height: 22px;
         font-weight: bold;
         display: none;
     }
+
     .cardMenu img {
         cursor: pointer;
-        
+
     }
 
     .heart_mobile {
@@ -644,10 +670,8 @@
     }
 
     /* Слой 3 */
-    .background_shadow {
+    .background_shadow {}
 
-    }
-    
     nav.layoutBottom {
         display: flex;
         align-items: center;
@@ -656,14 +680,14 @@
         height: 60px;
         gap: 5px;
     }
-    
-    .layoutBottom a{
+
+    .layoutBottom a {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 3px;
     }
-    
+
     a.refer_bottom {
         font-style: normal;
         font-weight: 400;
@@ -673,29 +697,34 @@
         font-weight: bold;
         display: none;
     }
-    
+
     a.refer_bottom:first-child {
         text-transform: uppercase;
         color: #E2195B;
-        margin-left: 10px;
+        margin-left: 0px;
+        padding-left: 15px;
+        padding-right: 5px;
+        padding-top: 5px;
         position: absolute;
         display: block !important;
-        top: 15px;
-        right: 15px;
+        top: 90px;
+        left: 15px;
         min-height: 40px;
+        border: solid;
+        border-radius: 10%;
     }
-    
+
     a.refer_bottom:first-child::before {
         content: url(./imgs/layout_3/discount.svg);
         position: relative;
         left: -10px;
-        top: 3px;
+        top: 7px;
     }
-    
+
     a.refer_bottom:nth-child(n+2):nth-child(-n+7)::after {
         content: url(./imgs/common/dropdown.svg);
         position: relative;
         top: 5px;
     }
-    
- }
+
+}
